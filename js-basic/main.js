@@ -189,11 +189,64 @@ for (i= 0; i <= numArray.length -1; i++){
 console.log("Бодлого 2 - Бүхэл тооны нийлбэрийг ол: [1, 3, 5, 7, 8.7]")
 console.log("Тооны нийлбэр: ", summary);
 
+// Bodlogo 3
+
+let h = 10;
+let w = 5;
+
+let per = (h+w)*2
+let s = h*w
 
 
+console.log("Бодлого 3 - Өгөгдсөн тэгш өнцөгтийн периметр ба талбайг ол. урт = 10 өргөн = 5")
+console.log("P = ",per)
+console.log("S = ",s)
+
+// Bodlogo 4
+
+let min = 0;
+let sec = 0;
+
+min = Math.floor(98/60);
+sec = 98%60;
+
+console.log("Бодлого 4 - Өгөгдсөн 98 секундыг минут секунд болго");
+console.log("Хариу: ", min + "min " + sec +"sec");
+
+// Bodlogo 5
+
+let min1 = 0;
+let sec1 = 0;
+
+min1 = Math.floor(1297/60);
+sec1 = 1297%60;
+
+console.log("Бодлого 5 - Өгөгдсөн 1297 секундыг  цаг минут секунд болго");
+console.log("Хариу: ", min1 + "min " + sec1 +"sec");
 
 
-    
+// Bodlogo 6
+
+let min2 = 875;
+let sec2 = 88;
+
+let inSec = min2*60 + sec2
+
+console.log("Бодлого 6 - Өгөгдсөн 875 минут 88  секундыг, секунд руу шилжүүл");
+console.log("Хариу: ", inSec+ "sec");
+
+// Bodlogo 7
+
+let hour = 83;
+let min3 = 84;
+let sec3 = 85;
+
+let inSec1 = hour*60*60 + min3*60 + sec3
+
+console.log("Бодлого 7 - Өгөгдсөн 83 цаг 84 минут 85  секундыг, секунд руу шилжүүл");
+console.log("Хариу: ", inSec1+ "sec");
+
+
 
 
 
