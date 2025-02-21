@@ -214,15 +214,19 @@ console.log("Бодлого 4 - Өгөгдсөн 98 секундыг минут 
 console.log("Хариу: ", min + "min " + sec +"sec");
 
 // Bodlogo 5
-
+let hour1 = 0;
 let min1 = 0;
 let sec1 = 0;
 
-min1 = Math.floor(1297/60);
-sec1 = 1297%60;
+min1 = Math.floor(21297/60);
+if(min1 > 60){
+    hour1 = Math.floor(min1/60)
+    min1 = min1%60
+}
+sec1 = 21297%60;
 
 console.log("Бодлого 5 - Өгөгдсөн 1297 секундыг  цаг минут секунд болго");
-console.log("Хариу: ", min1 + "min " + sec1 +"sec");
+console.log("Хариу: " + hour1 + "hour " + min1 + "min " + sec1 +"sec");
 
 
 // Bodlogo 6
@@ -246,12 +250,169 @@ let inSec1 = hour*60*60 + min3*60 + sec3
 console.log("Бодлого 7 - Өгөгдсөн 83 цаг 84 минут 85  секундыг, секунд руу шилжүүл");
 console.log("Хариу: ", inSec1+ "sec");
 
+///////////// 02.20 Bodlogo //////////////
+
+// Bodlogo 1
+console.log("////////////////////////////////////////////////////////////////////////////")
+let oe_array = [3, 2, 11, 7];
+
+console.log("Бодлого 1 - Өгөгдсөн тоонуудын тэгш сондгойг ол")
+console.log("Бодлого 1 - Хариу")
+
+for (i=0; i<=3; i++){
+    if(oe_array[i]%2 === 0){
+        console.log(oe_array[i], "энэ тоо бол тэгш тоо");
+    }else{
+        console.log(oe_array[i], "энэ тоо бол сондгой тоо");
+    }
+}
+
+console.log("////////////////////////////////////////////////////////////////////////////")
+
+let toonuud = [9, 3, 2, 7, 1]
+let a1 = toonuud[0];
+let b1 = 0;
+console.log("Бодлого 2 - Өгөгдсөн тоонуудын багыг ол")
+console.log("Бодлого 2 - Хариу")
+
+for(i=1;i<=4;i++){
+   
+    b1 = toonuud[i];
+    if(a1>b1){
+        a1 = b1;
+    }else{
+  a1 = a1;
+    }
+}
+console.log("Хамгийн бага тоо: ", a1)
+
+too1 = 9;
+too2 = 3;
+too3 = 2;
+
+if(too1 < too2 && too1 < too3){
+    console.log("Хамгийн бага тоо бол: ", too1)
+} else if(too2 < too1 && too2 < too3){
+    console.log("Хамгийн бага тоо бол: ", too2)
+} else if(too3 < too1 && too3 < too2){
+    console.log("Хамгийн бага тоо бол: ", too3)
+}
+
+console.log("////////////////////////////////////////////////////////////////////////////")
+
+let toonuud1 = [11, 20, 4, 3]
+let a2 = toonuud[0];
+let b2 = 0;
+console.log("Бодлого 3 - Өгөгдсөн тоонуудын ихийг ол")
+console.log("Бодлого 3 - Хариу")
+
+for(i=1;i<=3;i++){
+   
+    b2 = toonuud[i];
+    if(a2>b2){
+        a2 = a2;
+    }else{
+    a2 = b2;
+    }
+}
+console.log("Хамгийн их тоо: ", a2)
+
+console.log("////////////////////////////////////////////////////////////////////////////")
+
+let toonuud2 = [2, 9, 4]
+let b3 = 1;
+console.log("Бодлого 4 - 5 аас бага тооны үржвэрийг ол")
+console.log("Бодлого 4 - Хариу")
+
+for(i=0;i<=2;i++){
+     if(toonuud2[i] < 5){
+b3 = b3 * toonuud2[i]
+     }
+    
+}
+console.log("5-аас бага тоонуудын үржвэр: ", b3)
+
+n1 = 2;
+n2 = 9;
+n3 = 4;
+
+urj = 1;
+
+if (n1 < 5) {
+urj = urj * n1;
+}
+if( n2 < 5) {
+    urj = urj * n2;
+}
+ if( n3 < 5) {
+    urj = urj * n3;
+ }
+
+ console.log("Үржвэр = ", urj)
+
+ if (n1 > 5) {
+  n1 = 1;
+    }
+    if( n2 > 5) {
+     n2 = 1;
+    }
+     if( n3 > 5) {
+      n3 = 3;
+     }
+     console.log("Үржвэр = ", n1*n2*n3)
+    
+
+console.log("////////////////////////////////////////////////////////////////////////////")
+
+let toonuud3 = [11, 9, 4, 3]
+let b4 = 1;
+console.log("Бодлого 5 - 5 аас их тооны үржвэрийг ол")
+console.log("Бодлого 5 - Хариу")
+
+for(i=0;i<=2;i++){
+     if(toonuud3[i] > 5){
+b4 = b4 * toonuud3[i]
+     }
+    
+}
+console.log("5-аас их тоонуудын үржвэр: ", b4)
+
+console.log("////////////////////////////////////////////////////////////////////////////")
+console.log("Бодлого 6 - Өгөгдсөн сар аль улирал вэ")
+console.log("Бодлого 6 - Хариу")
+let sar = 0;
+ if(sar === 12 || sar === 1 || sar === 2) {
+    console.log("Өвлийн улирал юм бишүү дээ");
+ } else if (sar === 3 || sar === 4 || sar === 5){
+    console.log("Хавар хавар хавар ш дээ");
+ }else if(sar === 6 || sar === 7 || sar === 8){
+    console.log("Зуны улирал юм байнаа");
+ }else if(sar === 9 || sar === 10 || sar === 11){
+    console.log("Намар");
+ }else {
+    console.log("Буруу утга оруулсан байна")
+ }
 
 
+console.log("////////////////////////////////////////////////////////////////////////////")
 
-
-
-
+console.log("////////////////////////////////////////////////////////////////////////////")
+console.log("Бодлого 7 - Шалгалтын онооноос хамаарч дүн гарга")
+console.log("Бодлого 7 - Хариу")
+let onoo = 99;
+ if(onoo<60) {
+    console.log("Таны оноо:" + onoo + " байна. Маш муу");
+ } else if (60 <= onoo && onoo < 70){
+    console.log("Таны оноо:" + onoo + " байна. Хангалттай");
+ }else if(70 <= onoo && onoo < 80){
+    console.log("Таны оноо:" + onoo + " байна. Дунд");
+ }else if(80 <= onoo && onoo < 90){
+    console.log("Таны оноо:" + onoo + " байна. Сайн");
+ }else if (90 <= onoo && onoo <= 100) {
+    console.log("Таны оноо:" + onoo + " байна. Маш сайн");
+ }else {
+    console.log("Буруу утга оруулсан байна")
+ }
 
 
  
