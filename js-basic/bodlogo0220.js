@@ -99,7 +99,7 @@ let odd = 0;
 let x = 0;
 for (i=1; i <= 148; i++){
 x = i
-    while (x !==0){
+    while (x !== 0){
         digit = x % 10;
         if(digit % 2 !== 0){
             odd++;
