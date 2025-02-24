@@ -37,15 +37,15 @@
 // let x = 97;
 // let count = 0;
 
-// for (let i=2; i<=x; i++){
-//     if(x%i === 0){
-//         count++;
-//     }
-// }
-// if(count === 1) {
-// console.log(x + " too bol ankhnii too");
-// }else{
-// console.log(x + " too bol ankhnii too bish");}
+for (let i=2; i<x; i++){
+    if(x%i !== 0){
+    
+    }
+}
+if(count === 1) {
+console.log(x + " too bol ankhnii too");
+}else{
+console.log(x + " too bol ankhnii too bish");}
 
 // console.log("++++++++++++++++++++++++++++++++++++++++")
 // console.log("Homework 5") 
@@ -63,6 +63,7 @@
 // console.log("Homework 6") 
 
 let arr1 = [4, 5, 6, 7];
+
 let temp = arr1[0];
 let m = 0;
 for(let i=(arr1.length-1); i>=0; i--){
