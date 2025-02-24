@@ -94,11 +94,18 @@ console.log("Бодлого 3-6")
 // console.log("SUM", s);
 // console.log("COUNT", count);
 
-let j = 0;
+let digit = 0;
 let odd = 0;
+let x = 0;
 for (i=1; i <= 148; i++){
-
-    
+x = i
+    while (x !==0){
+        digit = x % 10;
+        if(digit % 2 !== 0){
+            odd++;
+        }
+        x = (x - digit) /10;
+    }
 }
 
 console.log("Нийт сондгой тоо: ", odd)
