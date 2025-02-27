@@ -38,3 +38,33 @@ function isEven(inputNumber) {
 }
 let y = isEven(11);
 console.log(y);
+
+console.log("======================== Arithmetic =======================");
+
+function subs(a, b) {
+  return a - b;
+}
+
+function div(a, b) {
+  return a / b;
+}
+
+function multiply(a, b) {
+  return a * b;
+}
+
+function add(a, b) {
+  return a + b;
+}
+
+let c = add(3, 4);
+console.log("+", c);
+
+let d = subs(5, 3);
+console.log("-", d);
+
+let e = multiply(4, 10);
+console.log("*", e);
+
+let f = div(20, 10);
+console.log("/", f);
