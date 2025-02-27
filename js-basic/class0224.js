@@ -18,7 +18,7 @@ for( let row=0; row<arr2d.length; row++){
 
 // Bubble sort
 
-let ar = [2,1,9,5,7];
+let ar = [3,5,1,8,13,41,24,7];
 for (let i=0; i < ar.length; i++){
     for(let j=i+1; j < ar.length; j++){
         if(ar[i] > ar[j]){

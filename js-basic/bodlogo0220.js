@@ -93,6 +93,8 @@ console.log("Бодлого 3-6")
 // console.log("SUM", kk);
 // console.log("SUM", s);
 // console.log("COUNT", count);
+console.log("=========================")
+console.log("Бодлого 3-6")
 
 let digit = 0;
 let odd = 0;
@@ -108,15 +110,21 @@ x = i
     }
 }
 
-console.log("Нийт сондгой тоо: ", odd)
+console.log("Нийт сондгой цифр: ", odd)
 
 console.log("=========================")
 console.log("Бодлого 3-7")
+let digit1 = 0;
 let even = 0;
-for (i=1; i<=148; i++){
-    if(i%2 === 0){
-        console.log(i);
-        even++;
+let x1 = 0;
+for (i=1; i <= 148; i++){
+x1 = i
+    while (x1 !== 0){
+        digit1 = x1 % 10;
+        if(digit1 % 2 === 0){
+            even++;
+        }
+        x1 = (x1 - digit1) /10;
     }
 }
 console.log("Нийт тэгш тоо: ", even);
