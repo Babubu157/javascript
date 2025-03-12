@@ -1,0 +1,19 @@
+.title {
+    background-color: yellow;
+    color: red;
+}
+
+.border { 
+    border: 2px solid green;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+#box{
+    width: 200px;
+    height: 200px;
+    background-color: blueviolet;
+}
