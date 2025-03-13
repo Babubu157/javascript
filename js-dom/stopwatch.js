@@ -4,10 +4,21 @@ let second = 0;
 let minute = 0;
 let hour = 0;
 let check = true;
+let a = 0;
 
 const timerDisplay = document.getElementById("timer");
 const btnStart = document.getElementById("start");
 const btnReset = document.getElementById("reset");
+
+const timer = () => {
+    console.log("Start");
+    if (btnStart.innerText === "Start"){
+        btnStart.innerText = "Stop";
+        btnStart.classList.add("stop")
+        
+    }
+}
+
 
 const timerStart = () => {
   if (check) {
@@ -28,18 +39,27 @@ const timerStart = () => {
       }
       display();
     }, 10);
+    
+    check = false;
   }
-  check = false;
+
+
+};
+timerStop();
 };
 
 const timerStop = () => {
+    a = 0;
   console.log("Stop");
   clearInterval(timerId);
+  check = true;
+  btnStart.innerText = "Start";
+  btnReset.innerText = "Reset";
 };
 
 const display = () => {
   timerDisplay.innerText = `${hour}:${minute}:${second}.${millSecond}`;
 };
 
-btnStart.addEventListener("click", timerStart);
-btnStop.addEventListener("click", timerStop);
+btnStart.addEventListener("click", timer);
+

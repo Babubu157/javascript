@@ -1,12 +1,12 @@
 .cont {
-  width: 400px;
+  /* width: 400px; */
 
-  border: 2px solid black;
+  /* border: 2px solid black; */
   display: flex;
   flex-direction: column;
 }
 #timer {
-  font-size: 80px;
+  font-size: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,4 +31,16 @@
   height: 70px;
   width: 70px;
   border-radius: 100%;
+}
+
+.start {
+  color: aqua;
+  background-color: blue;
+}
+.reset {
+}
+
+.stop {
+  color: red;
+  background-color: brown;
 }
