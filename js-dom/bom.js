@@ -8,36 +8,33 @@
 let counter = 10;
 let check = true;
 
-const countDisplay = document.getElementById("count")
+const countDisplay = document.getElementById("count");
 
-const btnStart = document.getElementById("start")
+const btnStart = document.getElementById("start");
 
-const btnStop = document.getElementById("stop")
+const btnStop = document.getElementById("stop");
 
-const countStart =() => {
-    console.log("Start");
-   
-        if (check){
-            timerId = setInterval(() => {
-                counter++;
-                display();
-            },1000)
-                
-        }
-      
-check = false;
+const countStart = () => {
+  console.log("Start");
+
+  if (check) {
+    timerId = setInterval(() => {
+      counter++;
+      display();
+    }, 1000);
+  }
+
+  check = false;
 };
-const countStop =() => {    
-    console.log("Stop");
-    clearInterval(timerId);
-    check = true;
-
-
+const countStop = () => {
+  console.log("Stop");
+  clearInterval(timerId);
+  check = true;
 };
 
 const display = () => {
-    countDisplay.innerText = counter;
-}
+  countDisplay.innerText = counter;
+};
 
 display();
 
