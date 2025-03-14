@@ -42,29 +42,10 @@ const formatTime = (num) => {
   // return num.toString().padStart(2, "0");
 };
 
-const reset = () => {
-  if (btnReset.innerText === "Reset") {
-    hour = 0;
-    minute = 0;
-    second = 0;
-    millSecond = 0;
-    lapList.innerHTML = "";
-    lapNum = 1;
-    display();
-  } else {
-    if (lapNum === 1) {
-      lapAdd();
-    } else {
-      lapAdd1();
-    }
-  }
-};
 
-const timerStart = () => {
-  if (check) {
-    console.log("start");
-    timerId = setInterval(() => {
-      millSecond++;
+
+const increase = () => {
+  millSecond++;
       if (millSecond === 100) {
         second++;
         millSecond = 0;
@@ -77,64 +58,91 @@ const timerStart = () => {
           }
         }
       }
-      display(hour, minute, second, millSecond);
+}
+
+const increase1 = () => {
+  millSecond1++;
+      if (millSecond1 === 100) {
+        second1++;
+        millSecond1 = 0;
+        if (second1 === 60) {
+          minute1++;
+          second1 = 0;
+          if (minute1 === 60) {
+            hour1++;
+            minute1 = 0;
+          }
+        }
+      }
+}
+
+const timerStart = () => {
+  if (check) {
+    console.log("start");
+    timerId = setInterval(() => {
+      increase();
+      increase1()
+      display();
+      display1();
     }, 10);
     check = false;
+    check1 = false;
   }
 };
 
 const timerStop = () => {
   console.log("Stop");
   clearInterval(timerId);
-  clearInterval(timerId1);
+
   check = true;
+  check1 = true;
 };
 
 const lapAdd = () => {
   const laps = `
     <div class="lap-container">
       <h4>Lap ${lapNum}</h4>
-      <p>${formatTime(hour)}:${formatTime(minute)}:${formatTime(
-    second
-  )}:${formatTime(millSecond)}</p>
+      <p>${formatTime(hour1)}:${formatTime(minute1)}:${formatTime(second1)}:${formatTime(millSecond1)}</p>
       </div>
     `;
-  lapList.innerHTML = laps;
+  lapList.innerHTML += laps;
+  millSecond1=0;
+  second1=0;
+  minute1=0;
+  hour1=0;
   lapNum++;
 };
 
-const lapAdd1 = () => {
-  const laps1 = `
-    <div class="lap-container">
-      <h4>Lap ${lapNum}</h4>
-      <p>
-      ${(timerId1 = setInterval(() => {
-        millSecond1++;
-        if (millSecond1 === 100) {
-          second1++;
-          millSecond1 = 0;
-          if (second1 === 60) {
-            minute1++;
-            second1 = 0;
-            if (minute1 === 60) {
-              hour1++;
-              minute1 = 0;
-            }
-          }
-        }
-      }, 10)`${formatTime(hour1)}:${formatTime(minute1)}:${formatTime(
-        second1
-      )}.${formatTime(millSecond1)}`)}
-      </p>
-    </div>
-    `;
-  test1.innerHTML += laps1;
+const reset = () => {
+  if (btnReset.innerText === "Reset") {
+    hour = 0;
+    minute = 0;
+    second = 0;
+    millSecond = 0;
+    lapList.innerHTML = "";
+    test1.innerText = "";
+    lapNum = 1;
+  check = true;
+    display();
+  } else {
+      lapAdd();
+  }
 };
 
 const display = () => {
   timerDisplay.innerText = `${formatTime(hour)}:${formatTime(
     minute
   )}:${formatTime(second)}.${formatTime(millSecond)}`;
+};
+
+const display1 = () => {
+  const testLapTitle = `
+    <div class="lap-container">
+      <h4>Lap ${lapNum}</h4>
+      <p>${formatTime(hour1)}:${formatTime(minute1)}:${formatTime(second1)}:${formatTime(millSecond1)}</p>
+      </div>
+    `;
+  test1.innerHTML = testLapTitle;
 };
 
 btnStart.addEventListener("click", timer);
