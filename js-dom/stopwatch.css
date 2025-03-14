@@ -6,7 +6,7 @@
   flex-direction: column;
 }
 #timer {
-  font-size: 40px;
+  font-size: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,9 +38,11 @@
   background-color: blue;
 }
 .reset {
+  color: cornsilk;
+  background-color: black;
 }
 
 .stop {
-  color: red;
+  color: rgb(243, 104, 104);
   background-color: brown;
 }
