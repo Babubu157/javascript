@@ -30,6 +30,7 @@ body {
   font-size: 70px;
   background-color: mintcream;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
 .btn {

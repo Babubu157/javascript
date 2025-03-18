@@ -66,13 +66,13 @@ btnEqual.addEventListener("click", () => {
   console.log(operand2);
   if (operator === "add") {
     result = parseFloat(
-      (parseFloat(operand1) + parseFloat(operand2)).toFixed(8)
+    (parseFloat(operand1) + parseFloat(operand2)).toFixed(8)
     );
     if (result) console.log(operand1);
     console.log(operand2);
   } else if (operator === "sub") {
     result = parseFloat(
-      (parseFloat(operand1) - parseFloat(operand2)).toFixed(2)
+      (parseFloat(operand1) - parseFloat(operand2)).toFixed(8)
     );
     console.log(operand1);
     console.log(operand2);
@@ -94,7 +94,7 @@ btnEqual.addEventListener("click", () => {
 });
 
 btnClear.addEventListener("click", () => {
-  display.innerText = "";
+  display.innerText = "0";
   operand1 = 0;
   operand2 = 0;
   result = 0;
