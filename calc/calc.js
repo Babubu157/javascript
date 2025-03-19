@@ -10,6 +10,7 @@ const btnEqual = document.getElementById("equal");
 const btnDot = document.getElementById("dot");
 // const btnZero = document.getElementById("zero");
 const btnClear = document.getElementById("clear");
+const btnReverse = document.getElementById("reverse");
 let operand1 = 0;
 let operand2 = 0;
 let operator = " ";
@@ -60,13 +61,34 @@ btnDot.addEventListener("click", () => {
   }
 });
 
+btnReverse.addEventListener("click", () => {
+  if (!display.innerText.includes("-")) {
+    display.innerText = "-" + display.innerText;
+  } else {
+    display.innerText = display.innerText.substring(
+      1,
+      display.innerText.length
+    );
+  }
+});
+
+// const newStr = str.replace("Hello", "Welcome");
+// console.log(newStr);
+// console.log(str);
+
+// const arr = str.trim().replace("Hello", "Welcome").toLowerCase().split(" ");
+// const subStr = str.substring(6, 12);
+
+// console.log(subStr);
+// console.log(arr);
+
 btnEqual.addEventListener("click", () => {
   operand2 = display.innerText;
   console.log(operand1);
   console.log(operand2);
   if (operator === "add") {
     result = parseFloat(
-    (parseFloat(operand1) + parseFloat(operand2)).toFixed(8)
+      (parseFloat(operand1) + parseFloat(operand2)).toFixed(8)
     );
     if (result) console.log(operand1);
     console.log(operand2);
