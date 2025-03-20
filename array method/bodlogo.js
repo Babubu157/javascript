@@ -48,6 +48,44 @@ console.log("=========== Bodlogo 3 ==========");
 let colors = ["red", "blue", "green", "yellow", "purple"];
 
 console.log(colors.indexOf("green"));
-let long = colors.filter((element) => element.length > 5);
+let long = colors.find((element) => element.length > 5);
 console.log(long);
-console.log(colors.indexOf(long[0]));
+console.log(colors.indexOf(long));
+
+let startWithY = colors.find((element) => {
+  if (element.startsWith("y", 0)) {
+    return element;
+  }
+});
+console.log(startWithY);
+
+console.log("=========== Homework 1 ==========");
+
+let words = ["hello", "world", "javascript", "coding"];
+
+let result = words.includes("world");
+console.log(result);
+
+// Ямар нэгэн элемент 7-с дээш үсэгтэй эсэхийг шалгах.
+// boolean utga butsaah esehiig lawlah
+let result1 = words.find((element) => element.length > 7);
+console.log(result1);
+
+let result2 = words.join(",");
+console.log(result2);
+
+console.log("=========== Homework 2 ==========");
+
+let numberArray = [4, 8, 12, 16];
+
+// reduce яаж ажилладгийг асуух
+const resultNum = numberArray.reduce((total, num) => total + num);
+console.log(resultNum);
+
+let newArray = [];
+numberArray.forEach((el) => {
+  el = el * 3;
+  newArray.push(el);
+  console.log(el);
+});
+console.log(newArray);
