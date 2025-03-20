@@ -182,4 +182,4 @@ const myFunction = (n, m) => {
   console.log("Hariu: ", diff);
 };
 
-myFunction();
+myFunction(100, 3);
