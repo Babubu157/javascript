@@ -183,3 +183,10 @@ const myFunction = (n, m) => {
 };
 
 myFunction(100, 3);
+
+
+console.log("=========== 0321 bodlogo ==========");
+
+const l = 2;
+
+const myFunction1 = () => 
